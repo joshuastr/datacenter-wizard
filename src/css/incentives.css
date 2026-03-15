@@ -1,0 +1,94 @@
+/* Incentives */
+.incentives-grid {
+    display: grid;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden
+}
+
+.incentive-card {
+    background: var(--bg-white);
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s ease
+}
+
+.incentive-card:last-child {
+    border-bottom: none
+}
+
+.incentive-card:hover {
+    background: var(--bg-subtle)
+}
+
+.incentive-type {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink-3);
+    padding: 3px 10px;
+    background: var(--bg-subtle);
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    margin-bottom: 8px
+}
+
+.incentive-type.rebate {
+    color: var(--accent-dark);
+    background: var(--accent-light)
+}
+
+.incentive-type.tax-credit {
+    color: #7c5a0a;
+    background: #fef9ee
+}
+
+.incentive-type.grant {
+    color: #0d6938;
+    background: #ecfdf5
+}
+
+.incentive-type.certification {
+    color: #5b21b6;
+    background: #f5f3ff
+}
+
+.incentive-name {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px
+}
+
+.incentive-value {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 8px
+}
+
+.incentive-desc {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.6;
+    margin-bottom: 8px;
+    max-width: 800px
+}
+
+.incentive-region {
+    font-size: 11px;
+    color: var(--ink-4);
+    font-weight: 500
+}
+
+.incentives-empty {
+    text-align: center;
+    padding: 48px;
+    color: var(--ink-3);
+    font-size: 15px
+}

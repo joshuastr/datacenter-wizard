@@ -1,0 +1,149 @@
+{
+    "incentives": [
+        {
+            "id": "inc-1",
+            "type": "rebate",
+            "name": "Utility High-Efficiency UPS Rebate",
+            "value": "$50-150 per kVA",
+            "region": "US",
+            "description": "Many US utilities offer rebates for installing high-efficiency (95%+) UPS systems that reduce energy losses. Rebate amounts vary by utility and UPS efficiency rating. Contact your local utility's commercial efficiency program.",
+            "domains": [
+                "power"
+            ]
+        },
+        {
+            "id": "inc-2",
+            "type": "rebate",
+            "name": "Variable Speed Drive (VSD) Rebate",
+            "value": "$50-200 per unit",
+            "region": "US",
+            "description": "Rebates for installing variable speed drives on cooling fans, pumps, and compressors. VSD motors reduce energy consumption by 30-50% compared to constant-speed motors. Available through most utility commercial programs.",
+            "domains": [
+                "cooling"
+            ]
+        },
+        {
+            "id": "inc-3",
+            "type": "tax-credit",
+            "name": "Energy Efficient Commercial Buildings Deduction (179D)",
+            "value": "Up to $5.00 per sq ft",
+            "region": "US",
+            "description": "Federal tax deduction for energy-efficient commercial building improvements. Datacenters achieving 25%+ energy reduction versus ASHRAE 90.1 baseline qualify. Available for lighting, HVAC, and building envelope improvements.",
+            "domains": [
+                "power",
+                "cooling"
+            ]
+        },
+        {
+            "id": "inc-4",
+            "type": "tax-credit",
+            "name": "IRA Clean Energy Investment Tax Credit",
+            "value": "Up to 30%",
+            "region": "US",
+            "description": "The Inflation Reduction Act provides tax credits for qualified clean energy investments including onsite solar, battery energy storage, and combined heat and power. Applies to datacenter operators installing onsite renewable energy or BESS.",
+            "domains": [
+                "power"
+            ]
+        },
+        {
+            "id": "inc-5",
+            "type": "rebate",
+            "name": "Free Cooling / Economizer Incentive",
+            "value": "$100-500 per ton",
+            "region": "US",
+            "description": "Utility incentives for installing airside or waterside economizers that reduce mechanical cooling hours. Higher incentives in mild climates where economizer hours exceed 4,000 per year.",
+            "domains": [
+                "cooling"
+            ]
+        },
+        {
+            "id": "inc-6",
+            "type": "certification",
+            "name": "ENERGY STAR for Data Centers",
+            "value": "Marketing + rebate eligibility",
+            "region": "US",
+            "description": "EPA ENERGY STAR certification for datacenters scoring 75 or above on the 1-100 ENERGY STAR score. Certified facilities gain marketing advantages and may qualify for additional utility rebates reserved for ENERGY STAR buildings.",
+            "domains": [
+                "power",
+                "cooling",
+                "monitoring"
+            ]
+        },
+        {
+            "id": "inc-7",
+            "type": "certification",
+            "name": "LEED Certification (Green Building)",
+            "value": "Marketing + tax incentives",
+            "region": "US",
+            "description": "LEED certification for datacenter facilities demonstrates commitment to sustainability. Points can be earned through energy efficiency, water conservation, renewable energy, and sustainable materials. Some jurisdictions offer tax incentives or expedited permitting for LEED-certified buildings.",
+            "domains": [
+                "power",
+                "cooling",
+                "racks",
+                "monitoring"
+            ]
+        },
+        {
+            "id": "inc-8",
+            "type": "grant",
+            "name": "DOE Better Buildings Challenge",
+            "value": "Technical assistance + recognition",
+            "region": "US",
+            "description": "US Department of Energy program providing free technical assistance and public recognition for organizations committing to 20% energy efficiency improvement over 10 years. Partners gain access to DOE tools, datasets, and peer networking.",
+            "domains": [
+                "power",
+                "cooling"
+            ]
+        },
+        {
+            "id": "inc-9",
+            "type": "rebate",
+            "name": "Natural Resources Canada - Energy Management Programs",
+            "value": "Varies by province",
+            "region": "CA",
+            "description": "Canadian federal and provincial programs offering rebates for energy-efficient commercial equipment including UPS, HVAC, and lighting upgrades. Programs vary by province - check with your local utility and NRCan.",
+            "domains": [
+                "power",
+                "cooling"
+            ]
+        },
+        {
+            "id": "inc-10",
+            "type": "tax-credit",
+            "name": "Canada Clean Technology Tax Credit",
+            "value": "Up to 30%",
+            "region": "CA",
+            "description": "Refundable tax credit for investments in clean technology assets including energy storage systems, waste heat recovery, and high-efficiency equipment for commercial applications.",
+            "domains": [
+                "power",
+                "cooling"
+            ]
+        },
+        {
+            "id": "inc-11",
+            "type": "rebate",
+            "name": "EU Energy Efficiency Directive Incentives",
+            "value": "Varies by member state",
+            "region": "EU",
+            "description": "EU member states offer various incentives under the Energy Efficiency Directive for commercial buildings achieving high energy performance. Programs vary by country but commonly cover HVAC upgrades, free cooling installations, and building energy management systems.",
+            "domains": [
+                "power",
+                "cooling",
+                "monitoring"
+            ]
+        },
+        {
+            "id": "inc-12",
+            "type": "certification",
+            "name": "EU Code of Conduct for Data Centres",
+            "value": "Industry recognition",
+            "region": "EU",
+            "description": "Voluntary EU initiative promoting energy efficiency in datacenters. Participants commit to implementing best practices from the Code of Conduct and reporting annually. Demonstrates commitment to EU sustainability goals.",
+            "domains": [
+                "power",
+                "cooling",
+                "monitoring"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "sections": [
+        {
+            "domain": [
+                "power"
+            ],
+            "title": "Power Distribution Fundamentals",
+            "items": [
+                {
+                    "q": "What is the difference between a CRAC and a CRAH unit?",
+                    "a": "CRAC (Computer Room Air Conditioning) uses a built-in compressor with direct expansion (DX) refrigerant - it is a self-contained cooling unit. CRAH (Computer Room Air Handler) uses chilled water from a central chiller plant. CRAHs are more energy-efficient at scale because central chillers optimize better at varying loads, but CRACs are simpler for smaller deployments since they do not require a separate chilled water plant."
+                },
+                {
+                    "q": "What UPS topologies are available and when should I use each?",
+                    "a": "The three main topologies are: Standby (offline) - cheapest, switches to battery on failure, brief transfer time. Line-Interactive - conditions incoming power, faster transfer, good for small deployments. Double-Conversion (online) - continuously converts AC to DC to AC, zero transfer time, best power quality. For datacenters, double-conversion is the standard because it provides seamless protection and conditions all power regardless of utility quality."
+                },
+                {
+                    "q": "What is the difference between N, N+1, 2N, and 2N+1 redundancy?",
+                    "a": "N = the exact capacity needed to run the IT load. N+1 = N capacity plus one extra unit (e.g., 3 UPS modules where 2 carry the full load). 2N = two completely independent systems, each capable of carrying the full load. 2N+1 = two complete systems plus a spare. Tier I uses N, Tier II uses N+1, Tier III uses N+1 with dual paths, and Tier IV uses 2N or 2N+1 with dual paths."
+                },
+                {
+                    "q": "What is a PDU and what types are available?",
+                    "a": "A Power Distribution Unit distributes power from the UPS to individual racks. Basic PDUs are essentially power strips. Metered PDUs show total power draw. Monitored PDUs show per-outlet power draw. Switched PDUs allow remote on/off control per outlet. Intelligent PDUs combine monitoring, switching, and environmental sensing. For datacenters, monitored or intelligent PDUs are recommended for capacity planning visibility."
+                },
+                {
+                    "q": "When should I use busway versus traditional PDU whips?",
+                    "a": "Busway (overhead bus duct) runs along the top of rack rows and allows tap-off boxes to be added or moved without downtime. It is ideal for facilities over 500 kW, colo environments with changing tenant loads, and any deployment planning significant growth. Traditional PDU whips (cables from floor-mounted PDUs to racks) are simpler and cheaper for smaller, stable deployments under 500 kW."
+                },
+                {
+                    "q": "How should I size a backup generator for my datacenter?",
+                    "a": "Size generators to support the full IT load plus cooling, lighting, and building systems at N+1 minimum. A common formula: Generator kW = (IT Load x PUE x 1.25 safety factor). For a 500 kW IT load with 1.5 PUE: 500 x 1.5 x 1.25 = 937 kW generator capacity. Always verify with a detailed load analysis. Include fuel storage for 24-48 hours of full-load runtime as a baseline."
+                }
+            ]
+        },
+        {
+            "domain": [
+                "cooling"
+            ],
+            "title": "Cooling Systems & HVAC",
+            "items": [
+                {
+                    "q": "What is PUE and what is a good target?",
+                    "a": "Power Usage Effectiveness (PUE) = Total Facility Power / IT Equipment Power. A PUE of 2.0 means you use 1 watt of overhead for every watt of IT power. Industry average is around 1.58. Best-in-class facilities achieve 1.1-1.2. Hyperscale operators like Google report near 1.1. For new builds, target PUE of 1.3-1.4 for air-cooled and 1.1-1.2 for liquid-cooled designs."
+                },
+                {
+                    "q": "What is hot aisle / cold aisle containment and why does it matter?",
+                    "a": "Containment physically separates the hot exhaust air from the cold supply air using doors, panels, or curtains at the ends of rack rows. Without containment, hot exhaust from one rack row can recirculate and mix with cold supply air, reducing cooling effectiveness by 30-40%. Cold aisle containment encloses the cold aisle. Hot aisle containment encloses the hot aisle (preferred because it keeps the room comfortable for personnel)."
+                },
+                {
+                    "q": "When should I consider liquid cooling versus air cooling?",
+                    "a": "Air cooling works well up to about 15 kW per rack with containment. From 15-30 kW, close-coupled cooling (in-row units, rear-door heat exchangers) extends the range of air-based systems. Above 30 kW per rack, direct liquid cooling (DLC) or immersion cooling is typically required. AI/ML GPU racks at 40-80+ kW per rack are impossible to cool with air alone. Liquid cooling also achieves dramatically better PUE (1.02-1.05)."
+                },
+                {
+                    "q": "What is the difference between air-cooled and water-cooled chillers?",
+                    "a": "Air-cooled chillers reject heat to outdoor air via fans and condenser coils - simpler to install, no water consumption, but less efficient in hot climates (COP 2.5-3.5). Water-cooled chillers reject heat via cooling towers that evaporate water - more efficient (COP 4.5-6.0) but consume significant water and require cooling tower maintenance. Water-cooled is standard for facilities over 500 kW in warm climates."
+                },
+                {
+                    "q": "What are ASHRAE thermal guidelines for datacenters?",
+                    "a": "ASHRAE TC 9.9 defines recommended and allowable temperature/humidity ranges. Class A1 (recommended for most datacenters): 18-27C supply air, 20-80% relative humidity. Class A2-A4 allow wider ranges. Most facilities target 20-24C supply air, but raising to 25-27C significantly increases free cooling hours. Operating at the upper end of A1 guidelines is considered best practice for efficiency."
+                },
+                {
+                    "q": "What is evaporative cooling and when is it effective?",
+                    "a": "Evaporative cooling uses the phase change of water (evaporation) to absorb heat from air. Direct evaporative cooling adds moisture to the datacenter air. Indirect evaporative cooling (IEC) keeps the wet and dry air streams separate, cooling the supply air without adding humidity. IEC is very effective in hot-dry climates (US Southwest, Australia, Middle East) and moderately effective in temperate climates. It is not effective in hot-humid climates."
+                }
+            ]
+        },
+        {
+            "domain": [
+                "racks"
+            ],
+            "title": "Racks, Containment & Cabling",
+            "items": [
+                {
+                    "q": "What rack size and depth should I specify?",
+                    "a": "Standard rack width is 19 inches (482.6mm) per EIA-310. Height is measured in rack units (U) where 1U = 44.45mm. The most common heights are 42U and 48U. Depth varies: 1000mm (39 inches) is minimum for modern servers, 1100-1200mm (43-47 inches) is preferred for deep servers with cable management space. Always verify the depth of your deepest equipment before specifying rack depth."
+                },
+                {
+                    "q": "How much weight can a standard server rack hold?",
+                    "a": "Standard commercial racks typically support 750-1,000 kg (1,650-2,200 lbs) static load. Heavy-duty racks support 1,200-1,500 kg (2,645-3,307 lbs). For high-density deployments with multiple GPU servers, verify the loaded weight carefully - a fully loaded 42U rack with dense servers and batteries can exceed 1,500 kg. Also verify that the raised floor tiles and substructure can support the point load."
+                },
+                {
+                    "q": "What are the benefits of structured cabling versus point-to-point?",
+                    "a": "Structured cabling uses a hierarchical system of patch panels, horizontal runs, and backbone cables per TIA-942 standards. Benefits: easier to manage and document, faster moves/adds/changes, cleaner airflow (no cable spaghetti blocking vents), simpler troubleshooting, and scalable growth. Point-to-point is cheaper initially but becomes unmanageable beyond a few dozen devices."
+                },
+                {
+                    "q": "What is the difference between copper and fiber cabling for datacenters?",
+                    "a": "Copper (Cat6/Cat6A) supports up to 10 Gbps over 100m, is cheaper for short runs, and easier to terminate. Fiber (OM3/OM4 multimode or OS2 singlemode) supports 10-400+ Gbps over longer distances, is immune to electromagnetic interference, and has a smaller cable diameter. Modern datacenters use fiber for backbone and inter-row connections, and copper for in-rack connections. Pre-terminated fiber trunk cables with MPO/MTP connectors are the standard for fast deployment."
+                },
+                {
+                    "q": "Should I use raised floor or slab floor in a new datacenter?",
+                    "a": "Raised floors provide space for power cabling, chilled water piping, and underfloor air distribution. However, overhead cable tray and overhead cooling are increasingly preferred for new builds because they avoid the air leakage and pressure management issues of raised floors. Slab floors with overhead distribution and in-row or rear-door cooling are simpler, eliminate raised floor maintenance, and support higher rack densities. Raised floors are still common in retrofits and some enterprise environments."
+                }
+            ]
+        },
+        {
+            "domain": [
+                "monitoring"
+            ],
+            "title": "Monitoring, Safety & Management",
+            "items": [
+                {
+                    "q": "What is DCIM and do I need it?",
+                    "a": "Data Center Infrastructure Management (DCIM) software monitors and manages the physical infrastructure - power, cooling, space, and connectivity. Basic DCIM provides asset tracking and power monitoring. Advanced DCIM adds capacity planning, what-if analysis, and automated workflows. You need DCIM if you have more than 50 racks, multiple stakeholders managing the facility, or need to demonstrate capacity utilization for planning or billing purposes."
+                },
+                {
+                    "q": "What environmental sensors should I deploy?",
+                    "a": "At minimum: temperature and humidity sensors at the inlet of every other rack row (top and bottom). Recommended additions: leak detection cables under raised floors and around all water-cooled equipment, differential air pressure sensors across containment barriers, airflow sensors in hot aisles, and door contact sensors for physical security. Sensor data should feed into DCIM or BMS for alerting and trend analysis."
+                },
+                {
+                    "q": "What fire suppression should a datacenter use?",
+                    "a": "The standard approach combines: (1) VESDA (Very Early Smoke Detection Apparatus) for earliest possible detection, (2) a clean agent system (Novec 1230 or FM-200) for primary suppression that does not harm IT equipment, and (3) a pre-action sprinkler system for code compliance. The pre-action system uses a dry pipe that only fills with water when both smoke and heat detectors confirm a fire, preventing accidental discharge."
+                },
+                {
+                    "q": "What is an EPO (Emergency Power Off) and when is it required?",
+                    "a": "An EPO is a system that immediately disconnects all power to the datacenter floor in an emergency (typically a fire or electrical hazard). It is required by most building codes (NEC, NFPA 70) and consists of clearly marked red pushbuttons at all exits. However, accidental EPO activation is one of the top causes of datacenter outages. Best practice is to use guarded switches (requiring a cover lift before pressing) and to document your EPO procedures."
+                },
+                {
+                    "q": "How do I integrate BMS (Building Management System) with DCIM?",
+                    "a": "BMS manages HVAC, fire, lighting, and access control for the overall building. DCIM manages IT power and cooling within the datacenter. Integration connects them so that DCIM receives BMS data (chiller status, outside temp, fire alarms) and BMS receives DCIM data (IT room temperature, power draw). Common protocols are BACnet, Modbus, and SNMP. Most DCIM vendors support standard protocols - verify compatibility during procurement."
+                }
+            ]
+        }
+    ]
+}

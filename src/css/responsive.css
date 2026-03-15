@@ -1,0 +1,138 @@
+/* ─── Tablet ─── */
+@media (max-width: 768px) {
+    .calculator-layout {
+        grid-template-columns: 1fr
+    }
+
+    .calc-container {
+        grid-template-columns: 1fr
+    }
+
+    .compare-grid {
+        grid-template-columns: 1fr
+    }
+
+    .incentives-grid {
+        grid-template-columns: 1fr
+    }
+
+    .wizard-options {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .header-author-link,
+    .header-sep {
+        display: none
+    }
+
+    .header-inner {
+        padding: 12px 16px
+    }
+
+    .domain-selector {
+        padding: 6px 16px 0;
+        gap: 4px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch
+    }
+
+    .domain-selector::-webkit-scrollbar {
+        display: none
+    }
+
+    .domain-btn {
+        font-size: 13px;
+        padding: 6px 14px;
+        flex-shrink: 0
+    }
+
+    .settings-bar {
+        padding: 0 16px
+    }
+
+    .domain-context-bar {
+        padding: 12px 16px 10px
+    }
+
+    .domain-context-title {
+        font-size: 18px
+    }
+
+    .domain-context-desc {
+        font-size: 12px
+    }
+
+    .tool-tabs {
+        padding: 8px 16px;
+        gap: 2px
+    }
+
+    .tool-tab {
+        padding: 6px 12px;
+        font-size: 12px;
+        gap: 6px
+    }
+
+    .main-content {
+        padding: 16px
+    }
+
+    .wizard-step-question {
+        font-size: 18px
+    }
+
+    .wizard-option {
+        padding: 16px 14px
+    }
+
+    .wizard-option-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 8px
+    }
+
+    .wizard-option-label {
+        font-size: 13px
+    }
+
+    .wizard-option-desc {
+        font-size: 11px
+    }
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 480px) {
+    .wizard-options {
+        grid-template-columns: 1fr
+    }
+
+    .domain-selector {
+        flex-wrap: nowrap;
+        justify-content: flex-start
+    }
+
+    .domain-btn {
+        font-size: 12px;
+        padding: 6px 12px
+    }
+
+    .domain-context-title {
+        font-size: 16px
+    }
+
+    .calc-panel {
+        padding: 20px 16px
+    }
+
+    .calc-panel h3 {
+        font-size: 15px
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px
+    }
+}

@@ -1,0 +1,561 @@
+{
+    "steps": [
+        {
+            "id": "facility-type",
+            "domain": [
+                "power",
+                "cooling",
+                "racks",
+                "monitoring"
+            ],
+            "question": "What type of datacenter facility?",
+            "description": "Different facility types have fundamentally different infrastructure requirements, redundancy levels, and equipment choices.",
+            "type": "single-select",
+            "options": [
+                {
+                    "value": "enterprise",
+                    "label": "Enterprise / On-Premise",
+                    "icon": "building",
+                    "description": "Private datacenter for a single organization"
+                },
+                {
+                    "value": "colocation",
+                    "label": "Colocation",
+                    "icon": "server",
+                    "description": "Multi-tenant shared facility"
+                },
+                {
+                    "value": "edge",
+                    "label": "Edge / Micro",
+                    "icon": "edge",
+                    "description": "Small distributed sites close to users"
+                },
+                {
+                    "value": "hyperscale",
+                    "label": "Hyperscale",
+                    "icon": "cloud",
+                    "description": "Massive cloud-scale facility (10MW+)"
+                },
+                {
+                    "value": "modular",
+                    "label": "Modular / Prefab",
+                    "icon": "container",
+                    "description": "Factory-built, rapidly deployable"
+                }
+            ]
+        },
+        {
+            "id": "tier-level",
+            "domain": [
+                "power",
+                "cooling",
+                "racks",
+                "monitoring"
+            ],
+            "question": "What availability tier are you targeting?",
+            "description": "Uptime Institute tiers define redundancy requirements. Higher tiers mean more equipment and cost but less downtime risk.",
+            "type": "single-select",
+            "options": [
+                {
+                    "value": "tier1",
+                    "label": "Tier I - Basic",
+                    "icon": "tier1",
+                    "description": "N capacity, single path, 99.671% uptime"
+                },
+                {
+                    "value": "tier2",
+                    "label": "Tier II - Redundant Components",
+                    "icon": "tier2",
+                    "description": "N+1 components, single path, 99.741% uptime"
+                },
+                {
+                    "value": "tier3",
+                    "label": "Tier III - Concurrently Maintainable",
+                    "icon": "tier3",
+                    "description": "N+1 paths, no shutdowns for maintenance, 99.982% uptime"
+                },
+                {
+                    "value": "tier4",
+                    "label": "Tier IV - Fault Tolerant",
+                    "icon": "tier4",
+                    "description": "2N+1 fully redundant, 99.995% uptime"
+                }
+            ]
+        },
+        {
+            "id": "it-load",
+            "domain": [
+                "power",
+                "cooling"
+            ],
+            "question": "What is the planned IT load?",
+            "description": "Total IT power draw determines the sizing for power distribution, UPS, generators, and cooling systems.",
+            "type": "single-select",
+            "options": [
+                {
+                    "value": "small",
+                    "label": "Under 100 kW",
+                    "icon": "small",
+                    "description": "Small server room or edge site"
+                },
+                {
+                    "value": "medium",
+                    "label": "100 kW - 500 kW",
+                    "icon": "medium",
+                    "description": "Mid-size enterprise datacenter"
+                },
+                {
+                    "value": "large",
+                    "label": "500 kW - 2 MW",
+                    "icon": "large",
+                    "description": "Large enterprise or colocation"
+                },
+                {
+                    "value": "xlarge",
+                    "label": "2 MW - 10 MW",
+                    "icon": "xlarge",
+                    "description": "Major colocation or hyperscale pod"
+                },
+                {
+                    "value": "hyperscale",
+                    "label": "10 MW+",
+                    "icon": "hyperscale",
+                    "description": "Hyperscale campus"
+                }
+            ]
+        },
+        {
+            "id": "power-density",
+            "domain": [
+                "power",
+                "cooling",
+                "racks"
+            ],
+            "question": "What power density per rack are you planning?",
+            "description": "Power density drives cooling strategy, rack selection, and power distribution architecture. AI/ML workloads are pushing densities well above traditional levels.",
+            "type": "single-select",
+            "options": [
+                {
+                    "value": "standard",
+                    "label": "5-8 kW per rack",
+                    "icon": "standard",
+                    "description": "Traditional enterprise, general compute"
+                },
+                {
+                    "value": "medium",
+                    "label": "10-15 kW per rack",
+                    "icon": "medium-density",
+                    "description": "Modern enterprise, mixed workloads"
+                },
+                {
+                    "value": "high",
+                    "label": "15-30 kW per rack",
+                    "icon": "high-density",
+                    "description": "High-performance computing, dense virtualization"
+                },
+                {
+                    "value": "ultra",
+                    "label": "30-50+ kW per rack",
+                    "icon": "ultra-density",
+                    "description": "AI/ML training, GPU clusters"
+                }
+            ]
+        },
+        {
+            "id": "primary-concern",
+            "domain": [
+                "power",
+                "cooling",
+                "racks",
+                "monitoring"
+            ],
+            "question": "What is the primary design priority?",
+            "description": "This helps weight recommendations toward your most important objective.",
+            "type": "single-select",
+            "options": [
+                {
+                    "value": "efficiency",
+                    "label": "Energy Efficiency / PUE",
+                    "icon": "efficiency",
+                    "description": "Minimize power overhead and operating costs"
+                },
+                {
+                    "value": "uptime",
+                    "label": "Maximum Uptime",
+                    "icon": "shield",
+                    "description": "Fault tolerance and redundancy above all"
+                },
+                {
+                    "value": "speed",
+                    "label": "Speed to Deploy",
+                    "icon": "speed",
+                    "description": "Get operational as fast as possible"
+                },
+                {
+                    "value": "budget",
+                    "label": "Budget Optimization",
+                    "icon": "dollar",
+                    "description": "Minimize capital expenditure"
+                },
+                {
+                    "value": "sustainability",
+                    "label": "Sustainability",
+                    "icon": "leaf",
+                    "description": "Low carbon, water-efficient, green certifications"
+                },
+                {
+                    "value": "density",
+                    "label": "High Density Support",
+                    "icon": "density",
+                    "description": "Support AI/ML and GPU workloads"
+                }
+            ]
+        },
+        {
+            "id": "cooling-preference",
+            "domain": [
+                "cooling"
+            ],
+            "question": "What cooling approach are you considering?",
+            "description": "Cooling method depends on density, climate, budget, and water availability. Higher densities increasingly require liquid cooling.",
+            "type": "single-select",
+            "options": [
+                {
+                    "value": "air-dx",
+                    "label": "Air-Cooled DX (CRAC)",
+                    "icon": "fan",
+                    "description": "Direct expansion, self-contained units"
+                },
+                {
+                    "value": "chilled-water",
+                    "label": "Chilled Water (CRAH)",
+                    "icon": "water",
+                    "description": "Central chiller plant with CRAH units"
+                },
+                {
+                    "value": "in-row",
+                    "label": "In-Row / Close-Coupled",
+                    "icon": "inrow",
+                    "description": "Cooling between racks, shorter air path"
+                },
+                {
+                    "value": "rear-door",
+                    "label": "Rear-Door Heat Exchangers",
+                    "icon": "reardoor",
+                    "description": "Passive or active cooling at the rack"
+                },
+                {
+                    "value": "liquid",
+                    "label": "Direct Liquid Cooling",
+                    "icon": "liquid",
+                    "description": "Coolant piped directly to chips/servers"
+                },
+                {
+                    "value": "immersion",
+                    "label": "Immersion Cooling",
+                    "icon": "immersion",
+                    "description": "Servers submerged in dielectric fluid"
+                },
+                {
+                    "value": "free-cooling",
+                    "label": "Free Cooling / Economizer",
+                    "icon": "wind",
+                    "description": "Uses outside air or water when climate permits"
+                }
+            ]
+        },
+        {
+            "id": "user-role",
+            "domain": [
+                "power",
+                "cooling",
+                "racks",
+                "monitoring"
+            ],
+            "question": "What is your role?",
+            "description": "This helps tailor the depth and focus of recommendations.",
+            "type": "single-select",
+            "options": [
+                {
+                    "value": "owner",
+                    "label": "Owner / Operator",
+                    "icon": "building",
+                    "description": "Building or managing the facility"
+                },
+                {
+                    "value": "engineer",
+                    "label": "Design Engineer / Consultant",
+                    "icon": "grid",
+                    "description": "Designing the infrastructure"
+                },
+                {
+                    "value": "contractor",
+                    "label": "Contractor / Installer",
+                    "icon": "tool",
+                    "description": "Installing or commissioning equipment"
+                },
+                {
+                    "value": "vendor",
+                    "label": "Equipment Vendor / Rep",
+                    "icon": "briefcase",
+                    "description": "Selling or specifying equipment"
+                },
+                {
+                    "value": "it-manager",
+                    "label": "IT / Facilities Manager",
+                    "icon": "monitor",
+                    "description": "Managing existing infrastructure"
+                }
+            ]
+        }
+    ],
+    "rules": [
+        {
+            "domain": [
+                "power"
+            ],
+            "name": "Enterprise Tier III Power Architecture",
+            "conditions": {
+                "facility-type": "enterprise",
+                "tier-level": "tier3"
+            },
+            "reasoning": "A Tier III enterprise datacenter requires concurrently maintainable power infrastructure - meaning any component can be taken offline for maintenance without affecting IT load. This requires dual power paths from utility through UPS to PDUs. The standard architecture is 2N UPS with static transfer switches (STS) at the rack level, or dual-corded servers with A+B power feeds. Each path must be capable of carrying the full IT load independently. Generators should be N+1 with automatic transfer switches (ATS) and enough fuel for 24-48 hours of runtime.",
+            "tips": [
+                "Use dual-bus UPS topology with each UPS sized for full load - this enables maintenance on either bus without downtime",
+                "Specify rotary or lithium-ion UPS for better energy density and longer lifespan versus traditional VRLA batteries",
+                "Deploy intelligent PDUs with per-outlet monitoring to identify stranded capacity and optimize utilization",
+                "Plan for 30% growth capacity in your UPS and switchgear from day one - it is far cheaper than retrofitting",
+                "Consider modular UPS systems that let you add capacity in increments rather than buying a single large unit upfront",
+                "Generator paralleling switchgear should be specified to handle N+1 generator configurations with automatic failover"
+            ]
+        },
+        {
+            "domain": [
+                "power"
+            ],
+            "name": "Edge / Micro Datacenter Power",
+            "conditions": {
+                "facility-type": "edge"
+            },
+            "reasoning": "Edge and micro datacenters prioritize compact, self-contained power solutions that can deploy in non-traditional environments. These sites typically run 10-100 kW of IT load and may not have dedicated facilities staff. Single-phase or small three-phase UPS systems with integrated battery cabinets are standard. Remote monitoring is critical since these sites are often unmanned. Many edge deployments use self-contained enclosures that include UPS, PDU, cooling, and fire suppression in a single pre-engineered package.",
+            "tips": [
+                "Self-contained micro datacenter enclosures (like Schneider EcoStruxure Micro) bundle power, cooling, and monitoring into a single deployable unit",
+                "Lithium-ion UPS batteries are strongly preferred for edge sites due to longer life, smaller footprint, and wider temperature tolerance",
+                "Remote monitoring via DCIM or cloud-based management is essential since edge sites are typically unmanned",
+                "Consider single-cord IT equipment with a single high-quality UPS rather than dual-corded A+B for simplicity at this scale",
+                "Ensure the UPS has network management cards for SNMP monitoring and integration with your central management platform"
+            ]
+        },
+        {
+            "domain": [
+                "power"
+            ],
+            "name": "Hyperscale Power Infrastructure",
+            "conditions": {
+                "facility-type": "hyperscale"
+            },
+            "reasoning": "Hyperscale facilities operate at massive scale where even small efficiency improvements save millions annually. Power architectures are designed for extreme efficiency with purpose-built substations, medium-voltage distribution to the rack row level, and UPS systems optimized for peak efficiency at typical load points. Many hyperscale operators use custom power distribution that eliminates traditional PDUs in favor of busway or overhead power distribution. Battery energy storage systems (BESS) are increasingly replacing generators for short-duration backup.",
+            "tips": [
+                "Medium-voltage distribution (e.g., 415V to the row) eliminates transformation losses and reduces copper costs significantly",
+                "Evaluate battery energy storage (BESS) as a generator alternative for short-duration backup - major hyperscalers are adopting this approach",
+                "Busway distribution from UPS to racks eliminates individual PDU whips and provides flexible capacity allocation",
+                "Target PUE below 1.2 with hot aisle containment, economizer cooling, and high-efficiency UPS operating in eco-mode",
+                "Custom power shelf designs (48V DC) are used by major hyperscalers to eliminate the UPS AC-DC-AC conversion entirely"
+            ]
+        },
+        {
+            "domain": [
+                "cooling"
+            ],
+            "name": "Standard-Density Air Cooling",
+            "conditions": {
+                "power-density": "standard"
+            },
+            "reasoning": "At 5-8 kW per rack, traditional raised-floor air cooling with CRAC or CRAH units remains the most cost-effective approach. Computer Room Air Conditioning (CRAC) units use direct expansion refrigerant cooling and are self-contained - ideal for smaller facilities. Computer Room Air Handlers (CRAH) use chilled water from a central plant and are more efficient at scale. Hot aisle/cold aisle arrangement is mandatory for proper airflow management. At this density, simple blanking panels and proper cable management are often sufficient without full containment.",
+            "tips": [
+                "CRAC units (DX) are simpler for small deployments (under 200 kW) since they do not need a chilled water plant",
+                "CRAH units are more efficient for larger deployments because central chillers operate at better part-load efficiency",
+                "Maintain strict hot aisle/cold aisle orientation - mixing hot and cold air streams wastes 30-40% of cooling capacity",
+                "Install blanking panels in every empty rack unit - they are the single cheapest efficiency improvement you can make",
+                "Target supply air temperature of 18-27C per ASHRAE A1 guidelines - many facilities overcool significantly"
+            ]
+        },
+        {
+            "domain": [
+                "cooling"
+            ],
+            "name": "High-Density Cooling Solutions",
+            "conditions": {
+                "power-density": "high"
+            },
+            "reasoning": "At 15-30 kW per rack, traditional perimeter air cooling cannot keep up. You need close-coupled cooling that brings the cooling directly to the heat source. In-row cooling units sit between racks and provide targeted cooling with very short air paths. Rear-door heat exchangers (RDHx) mount on the back of each rack and remove heat before it enters the room. Hot or cold aisle containment is mandatory at this density. Some facilities at the upper end of this range begin evaluating direct liquid cooling (DLC) for the densest racks while maintaining air cooling for standard racks.",
+            "tips": [
+                "In-row cooling units provide 30-60 kW of cooling capacity per unit and can be deployed incrementally as density increases",
+                "Rear-door heat exchangers can handle 30+ kW per rack passively (no fans) when supplied with sufficiently cold water",
+                "Full containment (hot or cold aisle) is mandatory at 15+ kW per rack - without it, recirculation defeats cooling capacity",
+                "Consider a hybrid approach: air cooling for standard racks and direct liquid cooling for your densest GPU/HPC racks",
+                "Ensure your chilled water system can supply 7-12C water at sufficient flow rates to support close-coupled cooling"
+            ]
+        },
+        {
+            "domain": [
+                "cooling"
+            ],
+            "name": "Ultra-High Density / AI Workload Cooling",
+            "conditions": {
+                "power-density": "ultra"
+            },
+            "reasoning": "At 30-50+ kW per rack, air cooling alone cannot remove enough heat regardless of configuration. Direct liquid cooling (DLC) or immersion cooling is required. DLC uses cold plates bolted directly to CPUs and GPUs with coolant circulated through a manifold system. Immersion cooling submerges entire servers in dielectric fluid. Both approaches achieve dramatically better cooling efficiency (PUE approaching 1.02-1.05) because liquid is 1,000x more thermally conductive than air. This density is driven by AI/ML training clusters using NVIDIA H100/B200 GPUs drawing 700W+ each.",
+            "tips": [
+                "Direct-to-chip liquid cooling is the most practical retrofit path for existing facilities adding AI/GPU racks",
+                "Immersion cooling (single-phase or two-phase) eliminates fans entirely and achieves PUE as low as 1.02-1.03",
+                "Coolant distribution units (CDUs) sit at the row or room level and transfer heat from facility water to the IT coolant loop",
+                "Plan plumbing infrastructure early - retrofitting liquid cooling piping into an air-cooled facility is expensive",
+                "Evaluate heat reuse opportunities: liquid cooling captures 95%+ of heat in usable-temperature water for district heating"
+            ]
+        },
+        {
+            "domain": [
+                "cooling"
+            ],
+            "name": "Free Cooling / Economizer Strategy",
+            "conditions": {
+                "primary-concern": "efficiency"
+            },
+            "reasoning": "Free cooling (economization) uses outside air or water to supplement or replace mechanical cooling when ambient conditions permit. Airside economizers bring filtered outside air directly into the datacenter. Waterside economizers use cooling towers or dry coolers to produce cold water without running the chiller compressors. In temperate climates, free cooling can provide 2,000-6,000+ hours per year of free cooling, dramatically reducing energy costs. Modern ASHRAE guidelines (A1-A4) allow wider operating temperature ranges that increase economizer hours.",
+            "tips": [
+                "In northern climates (northern US, Canada, northern Europe), airside economizers can eliminate mechanical cooling for 70%+ of the year",
+                "Waterside economizers with cooling towers are more appropriate for sites where dust, humidity, or pollution limit direct airside exposure",
+                "Raising the cold aisle temperature to 27C (ASHRAE A1 allowable) significantly increases the number of economizer hours",
+                "Evaporative cooling (wetted media or misting) extends economizer range into hotter climates by pre-cooling incoming air",
+                "Indirect evaporative cooling (IEC) keeps outside air separate from datacenter air while still capturing the evaporative benefit"
+            ]
+        },
+        {
+            "domain": [
+                "racks"
+            ],
+            "name": "Enterprise Rack & Containment",
+            "conditions": {
+                "facility-type": "enterprise"
+            },
+            "reasoning": "Enterprise datacenters typically use standard 42U-48U server cabinets with a mix of densities. Rack selection must account for weight capacity (many racks max at 1,000-1,500 kg - check this for dense configurations), cable management, PDU mounting, and airflow management. Hot aisle or cold aisle containment is the single most impactful infrastructure investment for cooling efficiency. Structured cabling with top-of-rack patch panels keeps the cable plant manageable as the environment grows.",
+            "tips": [
+                "Specify racks rated for at least 1,200 kg static load if planning any high-density deployments - standard racks may only support 750 kg",
+                "Hot aisle containment is generally preferred over cold aisle containment because it keeps the room comfortable for staff",
+                "Vertical cable managers with finger ducts on both sides of the rack prevent cables from blocking airflow through the equipment",
+                "Blanking panels in every empty rack unit are mandatory - they prevent hot air recirculation and cost less than $5 each",
+                "Pre-terminated fiber and copper assemblies cut installation time by 75% versus field-terminated cabling",
+                "Plan for 30-50% cabling growth capacity in your cable trays and pathways from day one"
+            ]
+        },
+        {
+            "domain": [
+                "monitoring"
+            ],
+            "name": "DCIM & Environmental Monitoring",
+            "conditions": {
+                "facility-type": "enterprise"
+            },
+            "reasoning": "Data Center Infrastructure Management (DCIM) software provides visibility into power, cooling, space, and connectivity across the facility. For enterprise datacenters, DCIM is essential for capacity planning, change management, and preventing costly mistakes like overloading circuits or creating cooling hotspots. Environmental sensors (temperature, humidity, leak detection) at the rack level provide early warning of issues before they cause downtime. Integration with Building Management Systems (BMS) enables automated responses to environmental events.",
+            "tips": [
+                "Start with basic DCIM functionality (asset tracking, power monitoring, environmental sensing) before enabling advanced analytics",
+                "Deploy temperature sensors at the top and bottom of every cabinet row to detect hotspots before they cause thermal shutdowns",
+                "Leak detection cables under the raised floor and around all water-cooled equipment provide early warning of water intrusion",
+                "Power monitoring at the PDU branch circuit level gives you visibility into actual versus rated power draw per rack",
+                "Integrate DCIM with your ticketing system so environmental alerts automatically create work orders",
+                "Video monitoring at all entry points and within the datacenter floor supports both security and incident investigation"
+            ]
+        },
+        {
+            "domain": [
+                "monitoring"
+            ],
+            "name": "Fire Suppression Systems",
+            "conditions": {},
+            "reasoning": "Datacenter fire suppression requires specialized systems that protect equipment without causing water damage or leaving residue. Clean agent systems (FM-200, Novec 1230, Inergen) suppress fire by removing heat or oxygen without contacting IT equipment with water or powder. Pre-action sprinkler systems provide code-compliant water-based suppression with a dry pipe that only charges when both heat detection and smoke detection confirm a fire, preventing accidental discharge. Most jurisdictions require a water-based system in addition to or as the primary system. Very Early Smoke Detection Apparatus (VESDA) provides the earliest possible warning by continuously sampling air.",
+            "tips": [
+                "Clean agent systems (Novec 1230 or FM-200) are the gold standard for protecting active IT equipment - they suppress fire without residue",
+                "Pre-action (double-interlock) sprinkler systems prevent accidental water discharge by requiring both smoke and heat detection before the pipes fill",
+                "VESDA (Very Early Smoke Detection) samples air continuously and can detect smoke particles before a fire is visible - essential for early warning",
+                "EPO (Emergency Power Off) systems must be code-compliant but also protected against accidental activation with guarded switches",
+                "Ensure your fire suppression system integrates with your BMS/DCIM for automated alerts and response coordination",
+                "Handheld fire extinguishers in the datacenter should be clean agent (CO2 or HFC) - never use water or powder extinguishers near IT equipment"
+            ]
+        },
+        {
+            "domain": [
+                "power",
+                "cooling",
+                "racks",
+                "monitoring"
+            ],
+            "name": "Modular / Prefab Datacenter",
+            "conditions": {
+                "facility-type": "modular"
+            },
+            "reasoning": "Modular and prefabricated datacenters are factory-built, tested, and shipped to site as complete units. They dramatically reduce deployment time from 18-24 months to 12-16 weeks. Each module is a self-contained unit with integrated power (UPS, PDU), cooling, fire suppression, and monitoring. They are ideal for rapid capacity expansion, remote sites, or organizations that want to avoid the complexity of ground-up construction. Modules can be deployed individually or connected together for larger deployments.",
+            "tips": [
+                "Major vendors include Schneider Electric, Vertiv, Rittal, and Huawei - each offers different module sizes and configurations",
+                "Factory commissioning and testing means the module arrives site-ready, reducing installation risk and commissioning time",
+                "Standard container-sized modules (20ft or 40ft ISO containers) can deploy on prepared concrete pads outdoors",
+                "Daisy-chain multiple modules for incremental capacity growth without overbuilding upfront",
+                "Ensure the module vendor provides a point-of-connection (POC) specification for site power, water, and network",
+                "Modules are ideal for disaster recovery sites, temporary capacity during construction, or edge deployments"
+            ]
+        },
+        {
+            "domain": [
+                "power"
+            ],
+            "name": "Budget-Optimized Power",
+            "conditions": {
+                "primary-concern": "budget"
+            },
+            "reasoning": "When budget is the primary constraint, focus on right-sizing rather than over-provisioning. Many datacenters are built with 2N redundancy but operate at 30-40% utilization, meaning half the power infrastructure sits idle. For budget-conscious deployments, N+1 redundancy (Tier II) provides a good balance of protection and cost. Modular UPS systems let you deploy the minimum capacity needed today and add modules as load grows. Single-corded IT with automatic transfer switches at the rack costs less than dual-corded A+B distribution.",
+            "tips": [
+                "Right-size your UPS: a modular UPS at 60% load is more efficient and cheaper than an oversized fixed UPS at 30% load",
+                "N+1 redundancy costs roughly 30-40% less than 2N while still providing maintenance windows and single-fault tolerance",
+                "Row-based PDUs are cheaper to install than overhead busway for facilities under 500 kW",
+                "Used or refurbished UPS systems from reputable vendors can save 40-60% versus new - ensure warranty and battery replacement",
+                "Single-phase UPS for small deployments (under 20 kW) avoids the cost of three-phase electrical infrastructure"
+            ]
+        },
+        {
+            "domain": [
+                "cooling"
+            ],
+            "name": "Sustainable Cooling Design",
+            "conditions": {
+                "primary-concern": "sustainability"
+            },
+            "reasoning": "Sustainable cooling design focuses on minimizing water use, eliminating refrigerants with high Global Warming Potential (GWP), and maximizing free cooling hours. The most sustainable approach varies by climate: cold climates can rely heavily on airside free cooling, while hot/arid climates benefit from closed-loop dry coolers that use no water. Natural refrigerants (R290, R744) and low-GWP alternatives are replacing traditional HFC refrigerants. Heat reuse captures waste heat for building heating, district heating, or industrial processes.",
+            "tips": [
+                "Adiabatic dry coolers use a fraction of the water compared to open cooling towers while still improving efficiency in hot weather",
+                "Low-GWP refrigerants (R290 propane, R744 CO2, R1234ze) are increasingly required by regulation and reduce environmental impact",
+                "Heat reuse from liquid-cooled racks can provide 60C+ water suitable for building heating or district heating systems",
+                "Locate datacenters in cold climates to maximize free cooling hours - Scandinavian and Canadian sites achieve PUE below 1.1 year-round",
+                "Track and report WUE (Water Usage Effectiveness) alongside PUE for a complete sustainability picture"
+            ]
+        },
+        {
+            "domain": [
+                "power",
+                "cooling",
+                "racks",
+                "monitoring"
+            ],
+            "name": "General Datacenter Recommendation",
+            "conditions": {},
+            "reasoning": "Based on your inputs, here are general best practices for datacenter infrastructure. Power, cooling, and space planning must be done holistically - they are deeply interconnected. Every watt of IT power becomes a watt of heat that cooling must remove. Design for your Day 1 load but ensure the architecture can scale to Day 2 without forklift upgrades. The biggest mistake in datacenter design is oversizing for day one (wasting capital) or undersizing the architecture (requiring expensive retrofits).",
+            "tips": [
+                "Size power and cooling for your 3-5 year projected load, but deploy equipment for your current load with modular growth capability",
+                "Hot/cold aisle containment is the single highest-ROI infrastructure investment - it improves cooling efficiency by 30-40%",
+                "Monitor power at every level (utility, UPS, PDU, branch circuit) to identify inefficiencies and prevent overloads",
+                "Standardize on one or two equipment vendors to simplify maintenance, spare parts inventory, and staff training",
+                "Commission a CFD (Computational Fluid Dynamics) analysis for any deployment over 500 kW to optimize cooling layout",
+                "Plan for 18-24 month lead times on major electrical equipment (switchgear, generators, large UPS) - order early"
+            ]
+        }
+    ]
+}

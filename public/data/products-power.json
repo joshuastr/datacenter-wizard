@@ -1,0 +1,184 @@
+{
+    "products": [
+        {
+            "id": "ups-1",
+            "category": "ups",
+            "manufacturer": "Schneider Electric",
+            "name": "Galaxy VX 500 kVA",
+            "specs": {
+                "Capacity": "500 kVA",
+                "Topology": "Double-conversion online",
+                "Efficiency": "Up to 99%",
+                "Form Factor": "Floor-standing",
+                "Redundancy": "Modular N+1 capable",
+                "Battery": "Li-ion or VRLA"
+            },
+            "description": "Scalable, high-efficiency three-phase UPS for large datacenter and industrial applications."
+        },
+        {
+            "id": "ups-2",
+            "category": "ups",
+            "manufacturer": "Schneider Electric",
+            "name": "Galaxy VS 100 kVA",
+            "specs": {
+                "Capacity": "100 kVA",
+                "Topology": "Double-conversion online",
+                "Efficiency": "Up to 99%",
+                "Form Factor": "Floor-standing compact",
+                "Redundancy": "N+1 internal",
+                "Battery": "Li-ion or VRLA"
+            },
+            "description": "Compact, efficient UPS for mid-size datacenters and edge deployments."
+        },
+        {
+            "id": "ups-3",
+            "category": "ups",
+            "manufacturer": "Vertiv",
+            "name": "Liebert EXL S1 800 kVA",
+            "specs": {
+                "Capacity": "800 kVA",
+                "Topology": "Double-conversion online",
+                "Efficiency": "Up to 99%",
+                "Form Factor": "Floor-standing modular",
+                "Redundancy": "Hot-swap modular",
+                "Battery": "VRLA or Li-ion"
+            },
+            "description": "High-capacity modular UPS for large enterprise and colocation datacenters."
+        },
+        {
+            "id": "ups-4",
+            "category": "ups",
+            "manufacturer": "Vertiv",
+            "name": "Liebert GXT5 10 kVA",
+            "specs": {
+                "Capacity": "10 kVA",
+                "Topology": "Double-conversion online",
+                "Efficiency": "Up to 98%",
+                "Form Factor": "Rack/Tower convertible",
+                "Redundancy": "Parallel capable",
+                "Battery": "VRLA"
+            },
+            "description": "Compact online UPS for edge, network closets, and small server rooms."
+        },
+        {
+            "id": "ups-5",
+            "category": "ups",
+            "manufacturer": "Eaton",
+            "name": "93PM 200 kVA",
+            "specs": {
+                "Capacity": "200 kVA",
+                "Topology": "Double-conversion online",
+                "Efficiency": "Up to 99%",
+                "Form Factor": "Floor-standing modular",
+                "Redundancy": "Hot-swap 50kW modules",
+                "Battery": "VRLA or Li-ion"
+            },
+            "description": "Modular UPS that scales in 50 kW increments for right-sized deployment."
+        },
+        {
+            "id": "pdu-1",
+            "category": "pdu",
+            "manufacturer": "Schneider Electric",
+            "name": "APC Metered Rack PDU",
+            "specs": {
+                "Type": "Metered",
+                "Input": "208V 3-phase 30A",
+                "Outlets": "42x C13 + 6x C19",
+                "Monitoring": "Total load metering",
+                "Form Factor": "0U vertical",
+                "Mounting": "Tool-less"
+            },
+            "description": "Reliable metered PDU with real-time load monitoring for standard rack deployments."
+        },
+        {
+            "id": "pdu-2",
+            "category": "pdu",
+            "manufacturer": "Raritan",
+            "name": "PX3 Intelligent PDU",
+            "specs": {
+                "Type": "Intelligent (switched + metered)",
+                "Input": "208V 3-phase 60A",
+                "Outlets": "48x C13 + 12x C19",
+                "Monitoring": "Per-outlet power monitoring",
+                "Form Factor": "0U vertical",
+                "Mounting": "Tool-less"
+            },
+            "description": "Feature-rich intelligent PDU with per-outlet metering, switching, and environmental sensor ports."
+        },
+        {
+            "id": "pdu-3",
+            "category": "pdu",
+            "manufacturer": "Server Technology",
+            "name": "PRO2 Switched PDU",
+            "specs": {
+                "Type": "Switched",
+                "Input": "208V 3-phase 30A",
+                "Outlets": "24x C13 + 6x C19",
+                "Monitoring": "Per-outlet power + switching",
+                "Form Factor": "0U vertical",
+                "Mounting": "Tool-less"
+            },
+            "description": "High-density switched PDU with remote power cycling and branch circuit monitoring."
+        },
+        {
+            "id": "gen-1",
+            "category": "generator",
+            "manufacturer": "Caterpillar",
+            "name": "C32 Diesel Generator 1250 kW",
+            "specs": {
+                "Capacity": "1,250 kW standby",
+                "Fuel": "Diesel",
+                "Voltage": "480V 3-phase",
+                "Starting": "10-second start",
+                "Runtime": "24h+ with base tank",
+                "Emissions": "EPA Tier 4 Final"
+            },
+            "description": "Heavy-duty diesel generator for critical backup power in large datacenter applications."
+        },
+        {
+            "id": "gen-2",
+            "category": "generator",
+            "manufacturer": "Cummins",
+            "name": "C500 D6 500 kW",
+            "specs": {
+                "Capacity": "500 kW standby",
+                "Fuel": "Diesel",
+                "Voltage": "480V 3-phase",
+                "Starting": "10-second start",
+                "Runtime": "24h+ with sub-base tank",
+                "Emissions": "EPA Tier 4 Final"
+            },
+            "description": "Reliable mid-range diesel generator for enterprise datacenter backup."
+        },
+        {
+            "id": "ats-1",
+            "category": "ats",
+            "manufacturer": "Eaton",
+            "name": "ATC-900 Transfer Switch 1200A",
+            "specs": {
+                "Capacity": "1,200A",
+                "Type": "Automatic Transfer Switch",
+                "Transfer Time": "< 10 seconds",
+                "Voltage": "480V 3-phase",
+                "Bypass": "Manual bypass included",
+                "Monitoring": "Network card option"
+            },
+            "description": "Automatic transfer switch for seamless utility-to-generator switchover in datacenter applications."
+        },
+        {
+            "id": "busway-1",
+            "category": "busway",
+            "manufacturer": "Schneider Electric",
+            "name": "Canalis KTA Busway 800A",
+            "specs": {
+                "Capacity": "800A",
+                "Type": "Overhead busbar trunk",
+                "Tap-offs": "Plug-in tap-off boxes",
+                "Material": "Copper conductors",
+                "Installation": "Overhead mounting",
+                "Flexibility": "Tap-offs add/move without shutdown"
+            },
+            "description": "Flexible overhead power distribution busway for high-density datacenter rows with hot-swappable tap-offs."
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "products": [
+        {
+            "id": "crac-1",
+            "category": "crac",
+            "manufacturer": "Schneider Electric",
+            "name": "Uniflair TDAV 60 kW",
+            "specs": {
+                "Capacity": "60 kW",
+                "Type": "DX downflow CRAC",
+                "Airflow": "12,000+ CFM",
+                "Refrigerant": "R410A",
+                "Form Factor": "Floor-standing",
+                "Features": "Variable speed fans, EC motors"
+            },
+            "description": "Precision air conditioning for small to mid-size datacenter rooms with variable capacity control."
+        },
+        {
+            "id": "crah-1",
+            "category": "crah",
+            "manufacturer": "Vertiv",
+            "name": "Liebert CW 100 kW",
+            "specs": {
+                "Capacity": "100 kW",
+                "Type": "Chilled water CRAH",
+                "Airflow": "20,000+ CFM",
+                "Water Temp": "7-15C supply",
+                "Form Factor": "Floor-standing",
+                "Features": "Variable speed EC fans"
+            },
+            "description": "High-efficiency chilled water air handler for medium to large datacenter deployments."
+        },
+        {
+            "id": "inrow-1",
+            "category": "inrow",
+            "manufacturer": "Schneider Electric",
+            "name": "InRow DX 30 kW",
+            "specs": {
+                "Capacity": "30 kW",
+                "Type": "In-row DX cooling",
+                "Airflow": "5,500 CFM",
+                "Width": "300mm (rack-width)",
+                "Form Factor": "In-row, rack-compatible",
+                "Features": "Close-coupled, variable capacity"
+            },
+            "description": "Targeted in-row cooling for high-density zones, deploys between server racks."
+        },
+        {
+            "id": "inrow-2",
+            "category": "inrow",
+            "manufacturer": "Vertiv",
+            "name": "Liebert XDC 40 kW",
+            "specs": {
+                "Capacity": "40 kW",
+                "Type": "In-row chilled water",
+                "Airflow": "7,500 CFM",
+                "Width": "300mm",
+                "Form Factor": "In-row, rack-compatible",
+                "Features": "EC fans, leak detection"
+            },
+            "description": "High-capacity in-row cooling for dense compute environments with chilled water infrastructure."
+        },
+        {
+            "id": "rdhx-1",
+            "category": "rdhx",
+            "manufacturer": "Motivair",
+            "name": "ChilledDoor 35 kW",
+            "specs": {
+                "Capacity": "35 kW",
+                "Type": "Passive rear-door heat exchanger",
+                "Airflow": "No additional fans",
+                "Water Temp": "12-18C supply",
+                "Form Factor": "Rear-door mount",
+                "Features": "Passive, zero fan energy, drip-free"
+            },
+            "description": "Passive rear-door heat exchanger that removes up to 35 kW per rack with no fan energy overhead."
+        },
+        {
+            "id": "cdu-1",
+            "category": "cdu",
+            "manufacturer": "Vertiv",
+            "name": "Liebert XDU 250 kW",
+            "specs": {
+                "Capacity": "250 kW",
+                "Type": "Coolant Distribution Unit",
+                "Coolant": "Facility water to IT coolant",
+                "Flow Rate": "100+ LPM",
+                "Form Factor": "Floor-standing",
+                "Features": "Redundant pumps, leak detection"
+            },
+            "description": "CDU for direct liquid cooling deployments, transferring heat between facility water and IT coolant loops."
+        },
+        {
+            "id": "cdu-2",
+            "category": "cdu",
+            "manufacturer": "CoolIT",
+            "name": "Rack DLC Manifold 100 kW",
+            "specs": {
+                "Capacity": "100 kW per rack",
+                "Type": "Rack-level CDU manifold",
+                "Coolant": "Propylene glycol",
+                "Flow Rate": "20-40 LPM",
+                "Form Factor": "In-rack manifold",
+                "Features": "Drip-free quick-connect, redundant"
+            },
+            "description": "Rack-level direct liquid cooling manifold with leak-free quick-disconnect fittings."
+        },
+        {
+            "id": "chiller-1",
+            "category": "chiller",
+            "manufacturer": "Trane",
+            "name": "CGAM Air-Cooled Chiller 350 kW",
+            "specs": {
+                "Capacity": "350 kW (100 tons)",
+                "Type": "Air-cooled scroll chiller",
+                "COP": "3.0-3.5",
+                "Refrigerant": "R410A",
+                "Form Factor": "Outdoor packaged",
+                "Features": "Variable speed, low ambient"
+            },
+            "description": "Packaged air-cooled chiller for mid-size datacenter cooling plants, no cooling tower required."
+        },
+        {
+            "id": "chiller-2",
+            "category": "chiller",
+            "manufacturer": "Carrier",
+            "name": "AquaEdge 700 kW",
+            "specs": {
+                "Capacity": "700 kW (200 tons)",
+                "Type": "Water-cooled centrifugal chiller",
+                "COP": "5.0-6.5",
+                "Refrigerant": "R1233zd (low-GWP)",
+                "Form Factor": "Indoor",
+                "Features": "Magnetic bearing, oil-free"
+            },
+            "description": "High-efficiency water-cooled chiller with magnetic bearings and low-GWP refrigerant for large datacenter plants."
+        }
+    ]
+}

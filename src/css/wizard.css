@@ -1,0 +1,296 @@
+/* Wizard */
+.wizard-container {
+    max-width: 1100px;
+    margin: 0 auto
+}
+
+.wizard-step {
+    margin-bottom: 48px
+}
+
+.wizard-step-header {
+    margin-bottom: 20px
+}
+
+.wizard-step-number {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink-4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px
+}
+
+.wizard-step-question {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 6px
+}
+
+.wizard-step-desc {
+    font-size: 14px;
+    color: var(--ink-3)
+}
+
+.wizard-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden
+}
+
+.wizard-option {
+    background: var(--bg-white);
+    border: none;
+    border-radius: 0;
+    padding: 22px 20px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    text-align: left;
+    font-family: var(--font-body);
+    color: var(--ink)
+}
+
+.wizard-option:hover {
+    background: var(--bg-subtle)
+}
+
+.wizard-option:active {
+    background: var(--bg-hover)
+}
+
+.wizard-option.selected {
+    background: var(--accent-light)
+}
+
+.wizard-option:hover:not(.selected) {
+    background: var(--bg-subtle)
+}
+
+.wizard-option.selected .wizard-option-label {
+    color: var(--accent-dark)
+}
+
+.wizard-option-icon {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--ink-3);
+    font-size: 0
+}
+
+.wizard-option-icon svg {
+    width: 20px;
+    height: 20px
+}
+
+.wizard-option.selected .wizard-option-icon {
+    color: var(--accent-dark)
+}
+
+.wizard-option-label {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 6px;
+    display: block
+}
+
+.wizard-option-desc {
+    font-size: 13px;
+    color: var(--ink-3);
+    display: block;
+    line-height: 1.5
+}
+
+.wizard-multi-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px
+}
+
+.wizard-multi-option {
+    background: var(--bg-white);
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all var(--transition);
+    text-align: left;
+    font-family: var(--font-body);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow-sm)
+}
+
+.wizard-multi-option:hover {
+    box-shadow: var(--shadow-md)
+}
+
+.wizard-multi-option.selected {
+    background: var(--accent-light);
+    border-color: var(--accent)
+}
+
+.wizard-multi-check {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-em);
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition)
+}
+
+.wizard-multi-option.selected .wizard-multi-check {
+    background: var(--accent);
+    border-color: var(--accent)
+}
+
+.wizard-multi-option.selected .wizard-multi-check::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat
+}
+
+.wizard-nav {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border)
+}
+
+.wizard-results.hidden {
+    display: none
+}
+
+.result-header {
+    text-align: center;
+    margin-bottom: 32px
+}
+
+.result-header h2 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px
+}
+
+.result-header p {
+    font-size: 15px;
+    color: var(--ink-3)
+}
+
+.result-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 16px
+}
+
+.result-tag {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent-dark);
+    background: var(--accent-light);
+    border: 1px solid var(--accent-mid);
+    padding: 4px 12px;
+    border-radius: 100px
+}
+
+.result-section {
+    margin-bottom: 24px
+}
+
+.result-section-title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border)
+}
+
+.result-reasoning {
+    font-size: 15px;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: var(--bg-subtle);
+    border: none;
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--accent)
+}
+
+.result-tips {
+    list-style: none;
+    padding: 0
+}
+
+.result-tips li {
+    padding: 12px 16px;
+    margin-bottom: 0;
+    background: var(--bg-white);
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    font-size: 14px;
+    color: var(--ink-2);
+    display: flex;
+    gap: 10px;
+    box-shadow: none
+}
+
+.result-tips li::before {
+    content: '\2192';
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0
+}
+
+.wizard-reset-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-3);
+    cursor: pointer;
+    transition: all var(--transition)
+}
+
+.wizard-reset-btn:hover {
+    background: var(--bg-subtle);
+    color: var(--ink);
+    border-color: var(--border-em)
+}
+
+.wizard-reset-btn svg {
+    opacity: 0.6
+}

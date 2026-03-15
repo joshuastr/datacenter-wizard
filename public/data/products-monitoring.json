@@ -1,0 +1,124 @@
+{
+    "products": [
+        {
+            "id": "dcim-1",
+            "category": "dcim",
+            "manufacturer": "Schneider Electric",
+            "name": "EcoStruxure IT",
+            "specs": {
+                "Type": "Cloud + On-Premise DCIM",
+                "Assets": "Unlimited assets",
+                "Monitoring": "Power, cooling, environment",
+                "Features": "Capacity planning, what-if, alerting",
+                "Integration": "SNMP, Modbus, BACnet, REST API",
+                "Deployment": "Cloud SaaS or on-premise"
+            },
+            "description": "Comprehensive DCIM platform with real-time monitoring, predictive analytics, and multi-site management."
+        },
+        {
+            "id": "dcim-2",
+            "category": "dcim",
+            "manufacturer": "Vertiv",
+            "name": "Trellis Platform",
+            "specs": {
+                "Type": "On-Premise DCIM",
+                "Assets": "Unlimited",
+                "Monitoring": "Power, cooling, space, connectivity",
+                "Features": "3D visualization, workflow automation",
+                "Integration": "SNMP, Modbus, BACnet",
+                "Deployment": "On-premise"
+            },
+            "description": "Enterprise DCIM with 3D floor visualization and automated workflow management for complex environments."
+        },
+        {
+            "id": "dcim-3",
+            "category": "dcim",
+            "manufacturer": "Sunbird",
+            "name": "dcTrack DCIM",
+            "specs": {
+                "Type": "On-Premise or Cloud DCIM",
+                "Assets": "Unlimited",
+                "Monitoring": "Power, space, connectivity",
+                "Features": "Capacity planning, change management",
+                "Integration": "REST API, SNMP, custom connectors",
+                "Deployment": "Cloud or on-premise"
+            },
+            "description": "Second-generation DCIM focused on ease of use, fast implementation, and actionable capacity intelligence."
+        },
+        {
+            "id": "sensor-1",
+            "category": "sensor",
+            "manufacturer": "Schneider Electric",
+            "name": "NetBotz Rack Monitor 250",
+            "specs": {
+                "Type": "Environmental monitor",
+                "Sensors": "Temp, humidity, door, leak",
+                "Ports": "6 sensor ports",
+                "Alerting": "SNMP, email, DCIM integration",
+                "Mounting": "0U rack mount",
+                "Power": "PoE or USB"
+            },
+            "description": "Rack-level environmental monitoring with temperature, humidity, and leak detection sensor support."
+        },
+        {
+            "id": "sensor-2",
+            "category": "sensor",
+            "manufacturer": "Raritan",
+            "name": "SX II Environmental Sensors",
+            "specs": {
+                "Type": "Modular sensor system",
+                "Sensors": "Temp, humidity, airflow, differential pressure",
+                "Ports": "Daisy-chain up to 32 sensors",
+                "Alerting": "SNMP, DCIM integration",
+                "Mounting": "Rack, wall, or overhead",
+                "Power": "Powered via PDU sensor port"
+            },
+            "description": "Flexible modular sensor platform that daisy-chains up to 32 environmental sensors per PDU connection."
+        },
+        {
+            "id": "fire-1",
+            "category": "fire",
+            "manufacturer": "Fike",
+            "name": "ECARO-25 Clean Agent System",
+            "specs": {
+                "Type": "Clean agent fire suppression",
+                "Agent": "ECARO-25 (HFC-125)",
+                "Coverage": "Up to 500 sqm per zone",
+                "ODP": "0 (zero ozone depletion)",
+                "Detection": "VESDA + spot detectors",
+                "Discharge": "10-second discharge"
+            },
+            "description": "Clean agent fire suppression system that extinguishes fire without residue or damage to IT equipment."
+        },
+        {
+            "id": "fire-2",
+            "category": "fire",
+            "manufacturer": "3M",
+            "name": "Novec 1230 System",
+            "specs": {
+                "Type": "Clean agent fire suppression",
+                "Agent": "Novec 1230 (FK-5-1-12)",
+                "Coverage": "Scalable per zone",
+                "GWP": "1 (ultra-low)",
+                "Safety": "Safe for occupied spaces",
+                "Discharge": "10-second discharge"
+            },
+            "description": "Environmentally preferred clean agent with the lowest GWP of any chemical suppression agent, safe for personnel and equipment."
+        },
+        {
+            "id": "vesda-1",
+            "category": "detection",
+            "manufacturer": "Honeywell",
+            "name": "VESDA-E VEA Aspirating Detector",
+            "specs": {
+                "Type": "Very Early Smoke Detection",
+                "Detection": "Aspirating laser detection",
+                "Coverage": "Up to 2,000 sqm",
+                "Sensitivity": "Pre-alarm at 0.005% obs/m",
+                "Sampling": "Air sampling pipe network",
+                "Integration": "BMS, DCIM, fire panel"
+            },
+            "description": "Aspirating smoke detection that continuously samples air for the earliest possible fire warning, hours before conventional detectors."
+        }
+    ]
+}

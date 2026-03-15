@@ -1,0 +1,43 @@
+/* Misc shared */
+.knowledge-empty {
+    text-align: center;
+    padding: 48px;
+    color: var(--ink-3);
+    font-size: 15px
+}
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 16px
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px
+}
+
+.empty-state {
+    text-align: center;
+    padding: 48px;
+    color: var(--ink-3);
+    font-size: 15px
+}
+
+.badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em
+}
+
+.badge-accent {
+    background: var(--accent-light);
+    color: var(--accent-dark)
+}

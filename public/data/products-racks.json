@@ -1,0 +1,124 @@
+{
+    "products": [
+        {
+            "id": "rack-1",
+            "category": "cabinet",
+            "manufacturer": "Schneider Electric",
+            "name": "APC NetShelter SX 42U",
+            "specs": {
+                "Height": "42U",
+                "Width": "600mm / 750mm",
+                "Depth": "1070mm / 1200mm",
+                "Weight Capacity": "1,361 kg (3,000 lbs)",
+                "Features": "perforated doors, cable management",
+                "Mounting": "EIA-310 standard"
+            },
+            "description": "Industry-standard server cabinet with high weight capacity and airflow-optimized perforated doors."
+        },
+        {
+            "id": "rack-2",
+            "category": "cabinet",
+            "manufacturer": "Rittal",
+            "name": "TS IT 48U",
+            "specs": {
+                "Height": "48U",
+                "Width": "600mm / 800mm",
+                "Depth": "1200mm",
+                "Weight Capacity": "1,500 kg (3,307 lbs)",
+                "Features": "Baying capability, integrated cable mgmt",
+                "Mounting": "EIA-310 standard"
+            },
+            "description": "Premium 48U datacenter cabinet with industry-leading weight capacity for high-density deployments."
+        },
+        {
+            "id": "rack-3",
+            "category": "cabinet",
+            "manufacturer": "Vertiv",
+            "name": "VR Rack 42U",
+            "specs": {
+                "Height": "42U",
+                "Width": "600mm / 800mm",
+                "Depth": "1100mm / 1200mm",
+                "Weight Capacity": "1,360 kg (3,000 lbs)",
+                "Features": "Tool-less mounting, split rear doors",
+                "Mounting": "EIA-310 standard"
+            },
+            "description": "Versatile datacenter rack with split rear doors for in-row cooling integration and high-density support."
+        },
+        {
+            "id": "contain-1",
+            "category": "containment",
+            "manufacturer": "Schneider Electric",
+            "name": "APC Hot Aisle Containment",
+            "specs": {
+                "Type": "Hot aisle containment",
+                "Compatibility": "42U / 48U racks",
+                "Components": "Roof panels, end doors, gap seals",
+                "Material": "Steel frame, clear panels",
+                "Installation": "Retrofit or new-build",
+                "Benefit": "30-40% cooling efficiency gain"
+            },
+            "description": "Complete hot aisle containment system with self-closing doors and roof panels for maximum cooling efficiency."
+        },
+        {
+            "id": "contain-2",
+            "category": "containment",
+            "manufacturer": "Panduit",
+            "name": "Net-Contain Cold Aisle",
+            "specs": {
+                "Type": "Cold aisle containment",
+                "Compatibility": "Any standard 42U+ rack",
+                "Components": "Vertical panels, sliding doors, roof",
+                "Material": "Polycarbonate panels",
+                "Installation": "Retrofit-friendly",
+                "Benefit": "Prevents hot air recirculation"
+            },
+            "description": "Flexible cold aisle containment solution compatible with any standard rack, easy to retrofit."
+        },
+        {
+            "id": "cable-1",
+            "category": "cabling",
+            "manufacturer": "Panduit",
+            "name": "Cat6A UTP Copper System",
+            "specs": {
+                "Category": "Cat6A (10GBASE-T)",
+                "Speed": "10 Gbps",
+                "Max Length": "100m",
+                "Type": "Unshielded Twisted Pair",
+                "Termination": "Keystone jacks + patch panels",
+                "Testing": "Channel tested, ETL verified"
+            },
+            "description": "Structured copper cabling system supporting 10 Gbps for in-rack and short inter-rack connections."
+        },
+        {
+            "id": "cable-2",
+            "category": "cabling",
+            "manufacturer": "Corning",
+            "name": "EDGE8 Fiber Solution",
+            "specs": {
+                "Fiber Type": "OM4 multimode",
+                "Speed": "Up to 400 Gbps",
+                "Connector": "MTP/MPO-12 trunk to LC breakout",
+                "Max Length": "150m (OM4 10G)",
+                "Termination": "Pre-terminated trunk cables",
+                "Testing": "Factory-tested, guaranteed IL"
+            },
+            "description": "Pre-terminated fiber optic cabling system for rapid deployment with guaranteed insertion loss performance."
+        },
+        {
+            "id": "cable-3",
+            "category": "cabling",
+            "manufacturer": "CommScope",
+            "name": "SYSTIMAX OS2 Singlemode",
+            "specs": {
+                "Fiber Type": "OS2 singlemode",
+                "Speed": "Up to 400 Gbps",
+                "Connector": "LC duplex",
+                "Max Length": "10+ km",
+                "Termination": "Pre-terminated or field",
+                "Testing": "OTDR tested"
+            },
+            "description": "Singlemode fiber system for backbone, inter-building, and long-distance datacenter interconnect."
+        }
+    ]
+}
