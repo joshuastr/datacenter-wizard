@@ -83,7 +83,7 @@ function renderCurrentCalc(container) {
             const cards = outputs.querySelectorAll('.calc-card')
             const lines = []
             const modeLabels = { power: 'Power & PUE', cooling: 'Cooling Load', tco: 'Build Cost / TCO' }
-            lines.push(`Datacenter Build Wizard — ${modeLabels[currentCalcMode] || 'Calculator'} Results`)
+            lines.push(`Datacenter Wizard — ${modeLabels[currentCalcMode] || 'Calculator'} Results`)
             lines.push('─'.repeat(40))
             cards.forEach(card => {
                 const label = card.querySelector('.calc-card-label')?.textContent || ''

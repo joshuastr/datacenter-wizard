@@ -1,4 +1,4 @@
-# Datacenter Build Wizard
+# Datacenter Wizard
 
 **Open-source knowledge tool for datacenter infrastructure planning.**
 
