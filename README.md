@@ -69,6 +69,18 @@ Content is informed by the Schneider Electric Data Center Certified Associate (D
 7. Efficiency & Sustainability
 8. Operations & Monitoring
 
+## Also Check Out
+
+- [Renewables Wizard](https://joshuastr.github.io/renewables-wizard/) — Open source knowledge tool for solar, EV charging, battery storage, and microgrids
+
+## Author
+
+Built by **Joshua Strub** — Digital Operations & Custom Software
+
+- 🌐 [joshuastrub.com](https://www.joshuastrub.com)
+- 💼 [Consulting Services](https://www.joshuastrub.com/consulting.html)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/joshuastrub/)
+
 ## License
 
-Open source. Built by [Joshua Strub](https://www.joshuastrub.com).
+Open source.
