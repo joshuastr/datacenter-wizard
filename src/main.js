@@ -4,6 +4,7 @@ import { initCalculator, renderCalculator } from './calculator.js'
 import { initComparison, renderComparison } from './comparison.js'
 import { initIncentives, renderIncentives } from './incentives.js'
 import { renderTracker } from './tracker.js'
+import { initDirectory, renderDirectory } from './directory.js'
 
 let activeDomain = 'power'
 let activeCountry = 'US'
@@ -32,6 +33,7 @@ const tabContexts = {
     calculator: { suffix: 'Calculators', desc: 'Estimate power requirements, cooling loads, PUE, and total cost of ownership for your project.' },
     compare: { suffix: 'Equipment Comparison', desc: 'Filter by manufacturer and category, then select up to 3 products to compare specs side by side.' },
     incentives: { suffix: 'Incentives', desc: 'Browse available rebates, tax credits, grants, and certifications for datacenter infrastructure.' },
+    directory: { suffix: 'Directory', desc: 'Find engineers, manufacturers, installers, sales agents, and wholesalers in the datacenter industry.' },
     tracker: { suffix: 'Project Tracker', desc: 'Track announced AI datacenter projects worldwide - capacity, developers, status, and power providers.' }
 }
 let activeTab = 'advisor'
@@ -53,7 +55,7 @@ function updateContextBar() {
 function toggleTrackerMode(isTracker) {
     const settingsBar = document.getElementById('settingsBar')
     const tabsWrapper = document.querySelector('.tool-tabs-wrapper')
-    const toolPanels = document.querySelectorAll('#advisorPanel, #knowledgePanel, #calculatorPanel, #comparePanel, #incentivesPanel')
+    const toolPanels = document.querySelectorAll('#advisorPanel, #knowledgePanel, #calculatorPanel, #comparePanel, #incentivesPanel, #directoryPanel')
     const trackerPanel = document.getElementById('trackerPanel')
 
     if (isTracker) {
@@ -150,6 +152,7 @@ function refreshAllModules() {
     renderCalculator(activeDomain, settings)
     renderComparison(activeDomain)
     renderIncentives(activeDomain, settings)
+    renderDirectory(activeDomain)
 }
 
 const BASE = import.meta.env.BASE_URL
@@ -163,7 +166,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initTabs()
     initDomainSelector()
     initSettingsBar()
-    const [treeData, faqData, powerData, coolingData, racksData, monitoringData, incentiveData] = await Promise.all([
+    const [treeData, faqData, powerData, coolingData, racksData, monitoringData, incentiveData, directoryListings] = await Promise.all([
         loadJSON(`${BASE}data/decision-tree.json`),
         loadJSON(`${BASE}data/faq.json`),
         loadJSON(`${BASE}data/products-power.json`),
@@ -171,6 +174,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         loadJSON(`${BASE}data/products-racks.json`),
         loadJSON(`${BASE}data/products-monitoring.json`),
         loadJSON(`${BASE}data/incentives.json`),
+        loadJSON(`${BASE}data/directory.json`),
     ])
     const settings = getSettings()
     initWizard(treeData, activeDomain)
@@ -178,4 +182,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     initCalculator(activeDomain, settings)
     initComparison({ power: powerData, cooling: coolingData, racks: racksData, monitoring: monitoringData }, activeDomain)
     initIncentives(incentiveData, activeDomain, settings)
+    initDirectory(directoryListings)
+    renderDirectory(activeDomain)
 })

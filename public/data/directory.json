@@ -1,0 +1,143 @@
+{
+    "listings": [
+        {
+            "id": "eng-01",
+            "name": "CriticalPath Engineering",
+            "company": "CriticalPath Engineering",
+            "category": "engineer",
+            "domains": [
+                "power",
+                "cooling",
+                "monitoring"
+            ],
+            "country": "US",
+            "state": "VA",
+            "city": "Ashburn",
+            "description": "MEP engineering firm specializing in mission-critical datacenter design. Expertise in Tier III/IV power architectures, liquid cooling systems, and facility monitoring.",
+            "website": "https://example.com"
+        },
+        {
+            "id": "eng-02",
+            "name": "Hyperscale Design Group",
+            "company": "Hyperscale Design Group",
+            "category": "engineer",
+            "domains": [
+                "power",
+                "cooling",
+                "racks",
+                "monitoring"
+            ],
+            "country": "US",
+            "state": "TX",
+            "city": "Dallas",
+            "description": "Full-service datacenter engineering consultancy. From concept through commissioning — power distribution, thermal management, and structured cabling.",
+            "website": "https://example.com"
+        },
+        {
+            "id": "mfr-01",
+            "name": "TitanPower Systems",
+            "company": "TitanPower Systems Inc.",
+            "category": "manufacturer",
+            "domains": [
+                "power"
+            ],
+            "country": "US",
+            "state": "OH",
+            "city": "Columbus",
+            "description": "Manufacturer of modular UPS systems, static transfer switches, and power distribution units for enterprise and hyperscale datacenters.",
+            "website": "https://example.com"
+        },
+        {
+            "id": "mfr-02",
+            "name": "ArcticFlow Technologies",
+            "company": "ArcticFlow Technologies",
+            "category": "manufacturer",
+            "domains": [
+                "cooling"
+            ],
+            "country": "US",
+            "state": "OR",
+            "city": "Portland",
+            "description": "Precision cooling solutions including rear-door heat exchangers, in-row cooling units, and direct-to-chip liquid cooling for high-density AI/GPU deployments.",
+            "website": "https://example.com"
+        },
+        {
+            "id": "inst-01",
+            "name": "CoreBuild Infrastructure",
+            "company": "CoreBuild Infrastructure",
+            "category": "installer",
+            "domains": [
+                "power",
+                "cooling",
+                "racks"
+            ],
+            "country": "US",
+            "state": "VA",
+            "city": "Richmond",
+            "description": "Licensed electrical and mechanical contractor specializing in datacenter buildouts — from bus duct installation to hot/cold aisle containment.",
+            "website": "https://example.com"
+        },
+        {
+            "id": "inst-02",
+            "name": "Northern Rack & Cable",
+            "company": "Northern Rack & Cable Ltd.",
+            "category": "installer",
+            "domains": [
+                "racks",
+                "monitoring"
+            ],
+            "country": "CA",
+            "state": "ON",
+            "city": "Toronto",
+            "description": "Rack deployment, structured cabling, and DCIM sensor installation across Canadian colocation and enterprise datacenters.",
+            "website": "https://example.com"
+        },
+        {
+            "id": "sales-01",
+            "name": "Marcus Holloway",
+            "company": "DataChannel Reps",
+            "category": "sales",
+            "domains": [
+                "power",
+                "cooling",
+                "racks",
+                "monitoring"
+            ],
+            "country": "US",
+            "state": "GA",
+            "city": "Atlanta",
+            "description": "Independent manufacturers' representative covering the Southeast US. Representing 12 datacenter infrastructure brands to contractors and colo operators.",
+            "website": "https://example.com"
+        },
+        {
+            "id": "whol-01",
+            "name": "DCX Supply",
+            "company": "DCX Supply Co.",
+            "category": "wholesaler",
+            "domains": [
+                "power",
+                "racks"
+            ],
+            "country": "US",
+            "state": "NJ",
+            "city": "Newark",
+            "description": "Wholesale distribution of PDUs, rack cabinets, cable management, and power whips. Same-day shipping from East Coast warehouse.",
+            "website": "https://example.com"
+        },
+        {
+            "id": "whol-02",
+            "name": "ThermalParts Direct",
+            "company": "ThermalParts Direct",
+            "category": "wholesaler",
+            "domains": [
+                "cooling",
+                "monitoring"
+            ],
+            "country": "US",
+            "state": "AZ",
+            "city": "Phoenix",
+            "description": "Stocking distributor for CRAH/CRAC units, containment curtains, environmental sensors, and DCIM hardware. 15+ brands in stock.",
+            "website": "https://example.com"
+        }
+    ]
+}

@@ -1,0 +1,319 @@
+/* Directory — CTA Banner */
+.dir-cta-banner {
+    margin-bottom: 28px;
+    border-radius: var(--radius-lg, 12px);
+    background: var(--accent-dark, #145e46);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    position: relative
+}
+
+.dir-cta-banner::before {
+    display: none
+}
+
+.dir-cta-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 32px
+}
+
+.dir-cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    flex-shrink: 0
+}
+
+.dir-cta-text {
+    flex: 1
+}
+
+.dir-cta-text h3 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em
+}
+
+.dir-cta-text p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    line-height: 1.5
+}
+
+.dir-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    background: var(--accent, #1a7a5c);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-md, 8px);
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 12px rgba(26, 122, 92, 0.3)
+}
+
+.dir-cta-btn:hover {
+    background: #1f8c6a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(26, 122, 92, 0.4)
+}
+
+/* Directory — Location Filters */
+.dir-location-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.dir-location-filters select:disabled {
+    opacity: 0.45;
+    cursor: not-allowed
+}
+
+.dir-clear-btn {
+    padding: 8px 14px;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-md, 8px);
+    background: var(--bg-white, #fff);
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--ink-3, #64748b);
+    cursor: pointer;
+    transition: all 0.15s ease
+}
+
+.dir-clear-btn:hover {
+    color: var(--ink, #0f172a);
+    border-color: var(--ink-4, #94a3b8)
+}
+
+/* Directory — Filter Pills */
+.dir-filter-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 24px;
+    flex-wrap: wrap
+}
+
+.dir-filter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    background: var(--bg-white, #fff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-3, #64748b);
+    cursor: pointer;
+    transition: all 0.15s ease
+}
+
+.dir-filter-pill:hover {
+    color: var(--ink, #0f172a);
+    border-color: var(--ink-4, #94a3b8);
+    background: var(--bg-subtle, #f8fafc)
+}
+
+.dir-filter-pill.active {
+    background: var(--accent, #1a7a5c);
+    color: #fff;
+    border-color: var(--accent, #1a7a5c);
+    font-weight: 600
+}
+
+.dir-pill-count {
+    font-size: 10px;
+    font-weight: 700;
+    opacity: 0.6;
+    min-width: 16px;
+    text-align: center
+}
+
+.dir-filter-pill.active .dir-pill-count {
+    opacity: 0.85
+}
+
+/* Directory — Card Grid */
+.dir-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px
+}
+
+.dir-card {
+    background: var(--bg-white, #fff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-md, 8px);
+    padding: 22px 24px;
+    transition: all 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column
+}
+
+.dir-card-logo {
+    margin-bottom: 16px
+}
+
+.dir-card-logo-img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid var(--border, #e2e8f0)
+}
+
+.dir-card-logo-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em
+}
+
+.dir-card:hover {
+    border-color: var(--accent, #1a7a5c);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px)
+}
+
+.dir-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px
+}
+
+.dir-category-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--badge-color);
+    background: color-mix(in srgb, var(--badge-color) 10%, transparent)
+}
+
+.dir-card-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    color: var(--ink-4, #94a3b8);
+    transition: all 0.15s ease
+}
+
+.dir-card-link:hover {
+    color: var(--accent, #1a7a5c);
+    background: var(--accent-light, #e6f4ee)
+}
+
+.dir-card-name {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink, #0f172a);
+    margin: 0 0 2px;
+    letter-spacing: -0.01em
+}
+
+.dir-card-company {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-3, #64748b);
+    margin-bottom: 10px;
+    min-height: 16px
+}
+
+.dir-card-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--ink-4, #94a3b8);
+    margin-bottom: 12px
+}
+
+.dir-card-desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-2, #334155);
+    margin: 0 0 14px
+}
+
+.dir-card-domains {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap
+}
+
+.dir-domain-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--ink-4, #94a3b8);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 4px;
+    text-transform: capitalize
+}
+
+/* Directory — Empty State */
+.dir-empty {
+    text-align: center;
+    padding: 56px 24px;
+    color: var(--ink-4, #94a3b8)
+}
+
+.dir-empty p {
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 12px auto 0
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dir-cta-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px
+    }
+
+    .dir-grid {
+        grid-template-columns: 1fr
+    }
+}
